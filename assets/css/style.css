@@ -1,0 +1,65 @@
+body {
+    background-color: tan;
+}
+
+.jumbotron {
+    background-color: beige;
+    color: black;
+}
+
+.game-instructions {
+    border: solid black 10px;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    margin: 5px;
+    font-size: 12px;
+}
+
+.random-number {
+    border: solid black 10px;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    margin: 5px;
+}
+
+.score-counter {
+    border: solid black 10px;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    margin: 5px;
+    font-size: 12px;
+}
+
+.score-counter {
+    border: solid black 10px;
+    padding: 15px;
+    background-color: white;
+    color: black;
+    margin: 5px;
+}
+
+img {
+    width: 90px;
+    height: 90px;
+}
+
+.total-score-counter {
+    border: solid black 10px;
+    padding: 15px;
+    background-color: white;
+    color: black;
+    margin: 5px;
+    font-size: 12px;
+}
+
+.your-score-counter {
+    border: solid black 10px;
+    padding: 15px;
+    background-color: white;
+    color: black;
+    margin: 5px;
+    font-size: 12px;
+}

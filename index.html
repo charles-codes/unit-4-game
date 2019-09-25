@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Crystals Collector Game</title>
+
+  <!-- Added link to the jQuery Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Added a link to Bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+  <!-- Added a link to our external stylesheet-->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+<div class="jumbotron">
+    <h1 class="header">Crystal Collector</h1>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="game-instructions">
+                <p>You will be given a random number at the start of the game.</p>
+                <br>
+                <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+                <br>
+                <p>You win the game by matching your total score to a random number. You lose the game if your total score goes above the random number.</p>
+                <br>
+                <p>The value of each crystal is hidden from you until you click on it.</p>
+                <br>
+                <p>Each time when the game starts the game will change the values of each crystal.</p>
+                <br>
+                <p>Good luck collecting your crystals!</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="random-number">
+            <div class="col-lg-4">
+                <p id="randomNumber"></p>
+            </div>
+        </div>
+
+        <div class="score-counter">
+            <div class="col-lg-4">
+                <p id="winsTally">Wins= </p>
+                <p id="lossesTally">Losses= </p>
+            </div>
+        </div>
+    
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="crystal-buttons">
+                <button id="button-red"><img src="assets/images/gem-red.png"></button>
+                <button id="button-blue"><img src="assets/images/gem-blue.png"></button>
+                <button id="button-green"><img src="assets/images/gem-green.png"></button>
+                <button id="button-violet"><img src="assets/images/gem-violet.png"></button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="total-score-counter">
+                <p>Your total score is: </p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-lg-4">
+            <div class ="your-score-counter">
+                <p id="yourScore">Your score count: </p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="game.js"></script>
+
+</body>
+
+</html>
