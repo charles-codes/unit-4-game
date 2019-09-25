@@ -1,13 +1,6 @@
 // Function to get the game up and running. //
 $(document).ready(function(){
 
-
-// Variables defined for printing text to the webpage. MAYBE use jQuery instead??? //
-    var winsText = document.getElementById("winsTally");
-    var lossesText = document.getElementById("lossesTally");
-    var cpuRandomText = document.getElementById("randomNumber");
-    var yourScoreText = document.getElementById("yourScore");
-
 // Variable to determine the computer's randomly generated nunber. //
     var cpuRandom = Math.floor(Math.random()*101+19)
         console.log("cpuRandom " + cpuRandom)
