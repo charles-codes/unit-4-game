@@ -1,41 +1,76 @@
-// Variables defined for printing text to the webpage. //
-var winsText = document.getElementById("winsTally");
-var lossesText = document.getElementById("lossesTally");
-var cpuRandomText = document.getElementById("randomNumber");
-var yourScoreText = document.getElementById("yourScore");
+// Function to get the game up and running. //
+$(document).ready(function(){
+
+
+// Variables defined for printing text to the webpage. MAYBE use jQuery instead??? //
+    var winsText = document.getElementById("winsTally");
+    var lossesText = document.getElementById("lossesTally");
+    var cpuRandomText = document.getElementById("randomNumber");
+    var yourScoreText = document.getElementById("yourScore");
 
 // Variable to determine the computer's randomly generated nunber. //
-var cpuRandom = Math.floor(Math.random()(120 - 19 + 1) + 19);
-    console.log("cpuRandom " + cpuRandom)
+    var cpuRandom = Math.floor(Math.random()*101+19)
+        console.log("cpuRandom " + cpuRandom)
 
 // Variables to define and select random numbers that correspond to each of the four buttons. //
 
-var crstals = Math.floor(Math.random()(12 - 1 + 1) + 1);
+    var crystalRedRandom= Math.floor(Math.random()*11+1);
+    var crystalBlueRandom= Math.floor(Math.random()*11+1);
+    var crystalGreenRandom= Math.floor(Math.random()*11+1);
+    var crystalVioletRandom= Math.floor(Math.random()*11+1);
 
-var crystalRedRandom;
-var crystalBlueRandom;
-var crystalGreenRandom;
-var crystalVioletRandom;
-
-var totalScore;
+// Variable for player's total score. //
+    var totalScore;
 
 // Variable for the wins and losses tally. //
-var wins = 0;
-var losses = 0;
+    var wins = 0;
+    var losses = 0;
 
- var gameStart = function(event) {
+// Game reset function. //
+    var reset = function () {
+        cpuRandom = Math.floor(Math.random()*101+19);
+        $("randomNumber").text(cpuRandom);
+        crystalRedRandom= Math.floor(Math.random()*11+1);
+        crystalBlueRandom= Math.floor(Math.random()*11+1);
+        crystalGreenRandom= Math.floor(Math.random()*11+1);
+        crystalVioletRandom= Math.floor(Math.random()*11+1);
+        totalScore = 0;
+    }
 
-    
- }
+// Functions for clicking on crystal buttons. //
+    $("button-red").on("click", function(){
+        totalScore + totalScore + crystalRedRandom;
+        $("yourScore").text(totalScore)
+            if (totalScore === cpuRandom) {
+                wins++;
+                reset();
+            }   
+    });
 
-document.onClick = function(event) {
+    $("button-blue").on("click", function(){
+        totalScore + totalScore + crystalBlueRandom;
+        $("yourScore").text(totalScore)
+            if (totalScore === cpuRandom) {
+                wins++;
+                reset();
+            }
+    });
 
+    $("button-green").on("click", function(){
+        totalScore + totalScore + crystalGreenRandom;
+        $("yourScore").text(totalScore)
+            if (totalScore === cpuRandom) {
+                wins++;
+                reset();
+            }
+    });
 
-}
-if (totalScore === cpuRandom) {
-    wins++;
-}
-
-else if (totalScore > cpuRandom) {
-    losses++;
-}
+    $("button-violet").on("click", function(){
+        totalScore + totalScore + crystalVioletRandom;
+        $("yourScore").text(totalScore)
+        if (totalScore === cpuRandom) {
+            wins++;
+            reset();
+        }
+    });
+});
